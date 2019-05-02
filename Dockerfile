@@ -72,5 +72,6 @@ WORKDIR /
 # Remove CLI source code from the final image and normalize line endings.
 RUN rm -rf ./azure-cli && \
     dos2unix /root/.bashrc /usr/local/bin/az
+RUN az extension add --name azure-devops    
 
 CMD bash
